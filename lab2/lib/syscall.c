@@ -57,11 +57,14 @@ int32_t syscall(int num, uint32_t a1,uint32_t a2,
 
 char getChar(){ // 对应SYS_READ STD_IN
 	// TODO: 实现getChar函数，方式不限
-	return 0;
+	char ch = syscall(SYS_READ,STD_IN,0,0,0,0);
+	return ch;
+	//return 0;
 }
 
 void getStr(char *str, int size){ // 对应SYS_READ STD_STR
 	// TODO: 实现getStr函数，方式不限
+	syscall(SYS_READ,STD_STR,(uint32_t)str,(uint32_t)size,0,0);
 	return;
 }
 
@@ -84,10 +87,6 @@ void printf(const char *format,...){
 		//buffer[count] = format[i];
 		//count++;
 		// TODO: in lab2
-		//if(format[i] == '%'){
-		//	i++;
-		//	count--;
-		//}
 	    switch(state){
 		case 0:
 			if(format[i] == '%'){

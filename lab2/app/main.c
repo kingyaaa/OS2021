@@ -27,7 +27,6 @@ int uEntry(void) {
 	printf("%d + %d = %d, %d * %d = %d, ", 1, 1, 1 + 1, 123, 456, 123 * 456);
 	printf("%d, %d, %d, %d, %d, %d, ", 0, 0xffffffff, 0x80000000, 0xabcedf01, -32768, 102030);
 	printf("%x, %x, %x, %x, %x, %x\n", 0, 0xffffffff, 0x80000000, 0xabcedf01, -32768, 102030);
-	/*
 	printf("Now I will test your getChar: ");
 	printf("1 + 1 = ");
 	char num = getChar();
@@ -39,7 +38,6 @@ int uEntry(void) {
 	printf("%s is stronger than Alice\n",name);
 	printf("=======================================================\n");
 	printf("Test end!!! Good luck!!!\n");
-	*/	
 	while(1);
 	return 0;
 }
